@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dormitory?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: root1234
+
+server:
+  port: 8888
+  servlet:
+    context-path: /dormitory
+
+mybatis:
+  mapper-locations: com/yanzhen/mapper/*.xml
+
+logging:
+  level:
+    com:
+      yanzhen:
+        mapper: debug
+
+pagehelper:
+  helper-dialect: mysql
